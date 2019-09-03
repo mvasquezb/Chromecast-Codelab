@@ -1,0 +1,257 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:17:1-57:12
+INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:17:1-57:12
+INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:17:1-57:12
+INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:17:1-57:12
+MERGED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:2:1-22:12
+MERGED from [com.google.android.gms:play-services-cast:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-16.1.2.aar/f9ed91218481cf061a226592548976f5/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.mediarouter:mediarouter:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/mediarouter-1.0.0.aar/ca5cddc4f9e7fc3eff8d0e43e6d44e8b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.2.aar/ee1b18d4ee6241893793384812dc2d19/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/recyclerview-1.0.0.aar/c180cd0112193c3b233903c965ad1af2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.volley:volley:1.1.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-volley-1.1.1.aar/13d9e12528a818a044d3860923106cde/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/2dea51c67ede170344eb7026ff968010/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2f44a4600ba38e543590479092ffd120/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/db9f294cce69a704bc9dc272492248b9/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/6c584eb23e57e75ebafe438735c071a3/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-rc01] /Users/pedro/.gradle/caches/transforms-1/files-1.1/legacy-support-v4-1.0.0-rc01.aar/56ccfde197203f43b38a95c127e40257/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.palette:palette:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/palette-1.0.0.aar/21879ef7b0acd1598e718cd71266d152/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/ac53878f0fe74abcf47ba602968d5232/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0.aar/44422d93b582bcf377cb5b7fc67d4a49/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0.aar/8514fd0a735f10876d1e1fcca226d96a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/6186832b6cf6747e9fec6905d5ba027e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/57076ee0e657e4ede6bcd235cf7b5bf7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/7ce072f050c22e1a3cbacfb015d31048/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/fec1d478e6e11df242d37166c7985673/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/db630f23de72996718511b525fdbac39/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/7e3dd43961c66dc7b487e551da4bd7e0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/8f066013e05be2c4549ff1856260fc9c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/af9a49e5a63ba5b26b211772ed6bb53a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/2f13bcaebdd6a0266ece56510a3ca1f7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/ff38e9b7f784a088316955c76022de45/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.1.aar/4d0227de09e882e14b6faba3cfa59d66/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/core-1.0.1.aar/5517730afb0e379c749ce6d726aabb16/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/00bab6b66782432f634baaf14460b0e5/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/33c65fea575b00035baac46fb6f7a7e4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0.aar/f7f07e06491067ff92fbfc87c725864b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/58bf4d31272ad2f7c1391f5672b428c0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/46b609ef835a5ca3cd48b8328ab8c690/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/e4de1b6d9b022a8bf207937b91ad153b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/761bd86eadaf7f61a5b2302824eeb2c6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/a88fe131c2c67223d94992d24c662b20/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/fdb0f68eaf75d5aa05a3e091d046e03a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/f44827b30f35282e3b88dcf60a87bd7e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/e49f0af509fb7b4a6a2058a8766f1778/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:17:1-57:12
+INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:17:1-57:12
+INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:17:1-57:12
+	package
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:18:5-47
+		INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+		INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:17:1-57:12
+		INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:17:1-57:12
+		INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:17:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:20:5-67
+	android:name
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:20:22-64
+application
+ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:22:5-55:19
+MERGED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:9:5-20:19
+MERGED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:9:5-20:19
+MERGED from [com.google.android.gms:play-services-cast:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-16.1.2.aar/f9ed91218481cf061a226592548976f5/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-cast:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-16.1.2.aar/f9ed91218481cf061a226592548976f5/AndroidManifest.xml:22:5-20
+MERGED from [com.android.volley:volley:1.1.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-volley-1.1.1.aar/13d9e12528a818a044d3860923106cde/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-volley-1.1.1.aar/13d9e12528a818a044d3860923106cde/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2f44a4600ba38e543590479092ffd120/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2f44a4600ba38e543590479092ffd120/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/db9f294cce69a704bc9dc272492248b9/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/db9f294cce69a704bc9dc272492248b9/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/6c584eb23e57e75ebafe438735c071a3/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/6c584eb23e57e75ebafe438735c071a3/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/core-1.0.1.aar/5517730afb0e379c749ce6d726aabb16/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/core-1.0.1.aar/5517730afb0e379c749ce6d726aabb16/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/00bab6b66782432f634baaf14460b0e5/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/00bab6b66782432f634baaf14460b0e5/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/core-1.0.1.aar/5517730afb0e379c749ce6d726aabb16/AndroidManifest.xml:22:18-86
+	android:label
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:25:9-41
+	android:icon
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:24:9-45
+	android:allowBackup
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:23:9-35
+	android:theme
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:26:9-53
+activity#com.google.sample.cast.refplayer.VideoBrowserActivity
+ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:28:9-37:20
+	android:screenOrientation
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:31:13-49
+	android:label
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:30:13-45
+	android:name
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:29:13-81
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:32:13-36:29
+action#android.intent.action.MAIN
+ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:33:17-69
+	android:name
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:33:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:35:27-74
+activity#com.google.sample.cast.refplayer.mediaplayer.LocalPlayerActivity
+ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:38:9-46:20
+	android:label
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:41:13-45
+	android:launchMode
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:42:13-44
+	android:configChanges
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:40:13-103
+	android:name
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:39:13-92
+intent-filter#action:name:android.intent.action.MAIN
+ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:43:13-45:29
+activity#com.google.sample.cast.refplayer.settings.CastPreference
+ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:47:9-54:20
+	android:label
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:50:13-52
+	android:theme
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:49:13-51
+	android:name
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml:48:13-84
+uses-sdk
+INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+MERGED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cast:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-16.1.2.aar/f9ed91218481cf061a226592548976f5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-cast:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-16.1.2.aar/f9ed91218481cf061a226592548976f5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.mediarouter:mediarouter:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/mediarouter-1.0.0.aar/ca5cddc4f9e7fc3eff8d0e43e6d44e8b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.mediarouter:mediarouter:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/mediarouter-1.0.0.aar/ca5cddc4f9e7fc3eff8d0e43e6d44e8b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.2.aar/ee1b18d4ee6241893793384812dc2d19/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.2.aar/ee1b18d4ee6241893793384812dc2d19/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/recyclerview-1.0.0.aar/c180cd0112193c3b233903c965ad1af2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/recyclerview-1.0.0.aar/c180cd0112193c3b233903c965ad1af2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.volley:volley:1.1.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-volley-1.1.1.aar/13d9e12528a818a044d3860923106cde/AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-volley-1.1.1.aar/13d9e12528a818a044d3860923106cde/AndroidManifest.xml:7:5-43
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/2dea51c67ede170344eb7026ff968010/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/2dea51c67ede170344eb7026ff968010/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2f44a4600ba38e543590479092ffd120/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2f44a4600ba38e543590479092ffd120/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/db9f294cce69a704bc9dc272492248b9/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/db9f294cce69a704bc9dc272492248b9/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/6c584eb23e57e75ebafe438735c071a3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/6c584eb23e57e75ebafe438735c071a3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-rc01] /Users/pedro/.gradle/caches/transforms-1/files-1.1/legacy-support-v4-1.0.0-rc01.aar/56ccfde197203f43b38a95c127e40257/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-rc01] /Users/pedro/.gradle/caches/transforms-1/files-1.1/legacy-support-v4-1.0.0-rc01.aar/56ccfde197203f43b38a95c127e40257/AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/palette-1.0.0.aar/21879ef7b0acd1598e718cd71266d152/AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/palette-1.0.0.aar/21879ef7b0acd1598e718cd71266d152/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/ac53878f0fe74abcf47ba602968d5232/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/ac53878f0fe74abcf47ba602968d5232/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0.aar/44422d93b582bcf377cb5b7fc67d4a49/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.0.0.aar/44422d93b582bcf377cb5b7fc67d4a49/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0.aar/8514fd0a735f10876d1e1fcca226d96a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/fragment-1.0.0.aar/8514fd0a735f10876d1e1fcca226d96a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/6186832b6cf6747e9fec6905d5ba027e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/6186832b6cf6747e9fec6905d5ba027e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/57076ee0e657e4ede6bcd235cf7b5bf7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/57076ee0e657e4ede6bcd235cf7b5bf7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/7ce072f050c22e1a3cbacfb015d31048/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/7ce072f050c22e1a3cbacfb015d31048/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/fec1d478e6e11df242d37166c7985673/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/fec1d478e6e11df242d37166c7985673/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/db630f23de72996718511b525fdbac39/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/db630f23de72996718511b525fdbac39/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/7e3dd43961c66dc7b487e551da4bd7e0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/7e3dd43961c66dc7b487e551da4bd7e0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/8f066013e05be2c4549ff1856260fc9c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/8f066013e05be2c4549ff1856260fc9c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/af9a49e5a63ba5b26b211772ed6bb53a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/af9a49e5a63ba5b26b211772ed6bb53a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/2f13bcaebdd6a0266ece56510a3ca1f7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/2f13bcaebdd6a0266ece56510a3ca1f7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/ff38e9b7f784a088316955c76022de45/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/ff38e9b7f784a088316955c76022de45/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.1.aar/4d0227de09e882e14b6faba3cfa59d66/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.0.1.aar/4d0227de09e882e14b6faba3cfa59d66/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/core-1.0.1.aar/5517730afb0e379c749ce6d726aabb16/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/core-1.0.1.aar/5517730afb0e379c749ce6d726aabb16/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/00bab6b66782432f634baaf14460b0e5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/00bab6b66782432f634baaf14460b0e5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/33c65fea575b00035baac46fb6f7a7e4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/33c65fea575b00035baac46fb6f7a7e4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0.aar/f7f07e06491067ff92fbfc87c725864b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.0.0.aar/f7f07e06491067ff92fbfc87c725864b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/58bf4d31272ad2f7c1391f5672b428c0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/58bf4d31272ad2f7c1391f5672b428c0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/46b609ef835a5ca3cd48b8328ab8c690/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/46b609ef835a5ca3cd48b8328ab8c690/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/e4de1b6d9b022a8bf207937b91ad153b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/e4de1b6d9b022a8bf207937b91ad153b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/761bd86eadaf7f61a5b2302824eeb2c6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/761bd86eadaf7f61a5b2302824eeb2c6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/a88fe131c2c67223d94992d24c662b20/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/a88fe131c2c67223d94992d24c662b20/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/fdb0f68eaf75d5aa05a3e091d046e03a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/fdb0f68eaf75d5aa05a3e091d046e03a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/f44827b30f35282e3b88dcf60a87bd7e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/f44827b30f35282e3b88dcf60a87bd7e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/e49f0af509fb7b4a6a2058a8766f1778/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/pedro/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/e49f0af509fb7b4a6a2058a8766f1778/AndroidManifest.xml:20:5-44
+INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+		INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+		ADDED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+		INJECTED from /Users/pedro/Documents/Code/a/ChromecastTest/AndroidManifest.xml
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:7:5-77
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:7:22-74
+receiver#com.google.android.gms.cast.framework.media.MediaIntentReceiver
+ADDED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:10:9-12:40
+	android:exported
+		ADDED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:12:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:11:13-91
+service#com.google.android.gms.cast.framework.media.MediaNotificationService
+ADDED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:14:9-16:40
+	android:exported
+		ADDED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:16:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:15:13-96
+service#com.google.android.gms.cast.framework.ReconnectionService
+ADDED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:17:9-19:40
+	android:exported
+		ADDED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:19:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:16.1.2] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/AndroidManifest.xml:18:13-85
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2f44a4600ba38e543590479092ffd120/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2f44a4600ba38e543590479092ffd120/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2f44a4600ba38e543590479092ffd120/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2f44a4600ba38e543590479092ffd120/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/6c584eb23e57e75ebafe438735c071a3/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/6c584eb23e57e75ebafe438735c071a3/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/6c584eb23e57e75ebafe438735c071a3/AndroidManifest.xml:24:13-58

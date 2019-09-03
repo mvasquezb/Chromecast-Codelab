@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
+            "map": [
+                {
+                    "source": "/Users/pedro/Documents/Code/a/ChromecastTest/res/values-v11/styles.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "661",
+                        "endLines": "24",
+                        "endColumns": "12",
+                        "endOffsets": "1018"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "412"
+                    }
+                }
+            ]
+        }
+    ]
+}
