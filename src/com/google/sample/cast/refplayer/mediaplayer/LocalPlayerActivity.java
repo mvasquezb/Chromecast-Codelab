@@ -385,6 +385,11 @@ public class LocalPlayerActivity extends AppCompatActivity {
         } else {
             updatePlaybackLocation(PlaybackLocation.LOCAL);
         }
+        Intent intent = getIntent();
+        Uri intentToJoinUri = Uri.parse("https://karaokesmart.co/cast/join");
+        if (intent.getData() != null && intent.getData().equals(intentToJoinUri)) {
+            mCastContext.getSessionManager().startSession(intent);
+        }
         super.onResume();
     }
 
