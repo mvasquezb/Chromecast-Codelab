@@ -1,4 +1,0 @@
-#Tue Sep 03 18:08:53 PET 2019
-base.0=/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/transforms/dexMerger/debug/10
-path.0=classes.dex
-renamed.0=classes.dex
