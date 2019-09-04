@@ -4,7 +4,24 @@
             "outputFile": "/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mn/values-mn.xml",
             "map": [
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/res/values-mn/values.xml",
+                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/play-services-cast-17.0.0.aar/288ed87740339135c8e66a568ec35723/res/values-mn/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7",
+                        "startColumns": "0,0,0,0",
+                        "startOffsets": "248,387,532,635",
+                        "endColumns": "138,144,102,89",
+                        "endOffsets": "386,531,634,724"
+                    },
+                    "to": {
+                        "startLines": "49,50,51,52",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "4975,5114,5259,5366",
+                        "endColumns": "138,144,106,93",
+                        "endOffsets": "5109,5254,5361,5455"
+                    }
+                },
+                {
+                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-17.0.0.aar/7eba55e95364c6561fa5d5873e3a33d2/res/values-mn/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/6c584eb23e57e75ebafe438735c071a3/res/values-mn/values.xml",
+                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/41edceef1a89f8a3c6a2185616c8de04/res/values-mn/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -72,23 +89,6 @@
                     }
                 },
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-16.1.2.aar/f9ed91218481cf061a226592548976f5/res/values-mn/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7",
-                        "startColumns": "0,0,0,0",
-                        "startOffsets": "248,387,532,635",
-                        "endColumns": "138,144,102,89",
-                        "endOffsets": "386,531,634,724"
-                    },
-                    "to": {
-                        "startLines": "49,50,51,52",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "4975,5114,5259,5366",
-                        "endColumns": "138,144,106,93",
-                        "endOffsets": "5109,5254,5361,5455"
-                    }
-                },
-                {
                     "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/mediarouter-1.0.0.aar/ca5cddc4f9e7fc3eff8d0e43e6d44e8b/res/values-mn/values-mn.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
@@ -106,7 +106,7 @@
                     }
                 },
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2f44a4600ba38e543590479092ffd120/res/values-mn/values.xml",
+                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/38b7841fe161f7577506b17e8570b1b4/res/values-mn/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

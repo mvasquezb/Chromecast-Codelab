@@ -21,7 +21,7 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int cast_notification_id = 0x7f080046;
+        public static final int cast_notification_id = 0x7f080047;
     }
     public static final class string {
         private string() {}

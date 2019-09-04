@@ -2,59 +2,51 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="25"
-    build-mode="FULL"
+    build-mode="COLD"
     density="xxhdpi"
     format="10"
+    ir-eligibility="R_CLASS_CHANGE"
     plugin-version="3.2.1"
-    timestamp="1567550925909"
+    timestamp="1567626665081"
     token="-7018941350334341862"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1555" />
+        duration="583" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="128" />
+        duration="5" />
     <task
         name="verifier"
-        duration="116" />
+        duration="18" />
 
     <artifact
-        location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
         location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
         location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_1.apk"
         type="SPLIT" />
     <artifact
+        location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
         location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
         location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
     <artifact
+        location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
         location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
         location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/instant-run-apk/debug/ChromecastTest-debug.apk"
@@ -62,8 +54,9 @@
 
     <build
         build-mode="FULL"
-        timestamp="1567550925909"
-        verifier="FULL_BUILD_REQUESTED" >
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1567625754692"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
@@ -83,19 +76,52 @@
             location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/instant-run-apk/debug/ChromecastTest-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1567626665081"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
             location="/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/instant-run-apk/debug/ChromecastTest-debug.apk"

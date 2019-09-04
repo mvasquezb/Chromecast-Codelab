@@ -4,7 +4,24 @@
             "outputFile": "/Users/pedro/Documents/Code/a/ChromecastTest/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml",
             "map": [
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-16.1.2.aar/f9ed91218481cf061a226592548976f5/res/values-pt-rBR/values.xml",
+                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-17.0.0.aar/41edceef1a89f8a3c6a2185616c8de04/res/values-pt-rBR/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "203",
+                        "endOffsets": "454"
+                    },
+                    "to": {
+                        "startLines": "79",
+                        "startColumns": "4",
+                        "startOffsets": "8428",
+                        "endColumns": "203",
+                        "endOffsets": "8627"
+                    }
+                },
+                {
+                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/play-services-cast-17.0.0.aar/288ed87740339135c8e66a568ec35723/res/values-pt-rBR/values.xml",
                     "from": {
                         "startLines": "4,5,6,7",
                         "startColumns": "0,0,0,0",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-cast-framework-16.1.2.aar/029a472cbcbca8c929f632639bc50416/res/values-pt-rBR/values.xml",
+                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-17.0.0.aar/7eba55e95364c6561fa5d5873e3a33d2/res/values-pt-rBR/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,7 +72,7 @@
                     }
                 },
                 {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2f44a4600ba38e543590479092ffd120/res/values-pt-rBR/values.xml",
+                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/play-services-base-17.0.0.aar/38b7841fe161f7577506b17e8570b1b4/res/values-pt-rBR/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -69,23 +86,6 @@
                         "startOffsets": "7258,7365,7545,7674,7784,8010,8142,8294,8632,8861,8971,9166,9298,9514,9701,9800,9896",
                         "endColumns": "106,179,128,109,225,131,151,133,228,109,194,131,215,186,98,95,112",
                         "endOffsets": "7360,7540,7669,7779,8005,8137,8289,8423,8856,8966,9161,9293,9509,9696,9795,9891,10004"
-                    }
-                },
-                {
-                    "source": "/Users/pedro/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/6c584eb23e57e75ebafe438735c071a3/res/values-pt-rBR/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "203",
-                        "endOffsets": "454"
-                    },
-                    "to": {
-                        "startLines": "79",
-                        "startColumns": "4",
-                        "startOffsets": "8428",
-                        "endColumns": "203",
-                        "endOffsets": "8627"
                     }
                 },
                 {
