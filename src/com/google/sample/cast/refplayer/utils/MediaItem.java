@@ -16,7 +16,13 @@
 
 package com.google.sample.cast.refplayer.utils;
 
+import android.net.Uri;
 import android.os.Bundle;
+
+import com.google.android.gms.cast.MediaInfo;
+import com.google.android.gms.cast.MediaMetadata;
+import com.google.android.gms.cast.MediaQueueItem;
+import com.google.android.gms.common.images.WebImage;
 
 import java.util.ArrayList;
 
@@ -39,6 +45,8 @@ public class MediaItem {
     public static final String KEY_URL= "movie-urls";
     public static final String KEY_IMAGES = "images";
     public static final String KEY_CONTENT_TYPE = "content-type";
+    private MediaQueueItem mediaQueueItem;
+    private MediaInfo mediaInfo;
 
     public String getUrl() {
         return mUrl;
@@ -137,5 +145,32 @@ public class MediaItem {
         return media;
     }
 
+    public MediaQueueItem toMediaQueueItem() {
+        if (mediaQueueItem == null) {
+            mediaQueueItem = new MediaQueueItem.Builder(getMediaInfo())
+                    .setAutoplay(true)
+                    .setPreloadTime(20)
+                    .build();
+        }
+        return mediaQueueItem;
+    }
 
+    public MediaInfo getMediaInfo() {
+        if (mediaInfo == null) {
+            MediaMetadata movieMetadata = new MediaMetadata(MediaMetadata.MEDIA_TYPE_MOVIE);
+
+            movieMetadata.putString(MediaMetadata.KEY_SUBTITLE, getSubTitle());
+            movieMetadata.putString(MediaMetadata.KEY_TITLE, getTitle());
+            movieMetadata.addImage(new WebImage(Uri.parse(getImage(0))));
+            movieMetadata.addImage(new WebImage(Uri.parse(getImage(1))));
+
+            mediaInfo = new MediaInfo.Builder(getUrl())
+                    .setStreamType(MediaInfo.STREAM_TYPE_BUFFERED)
+                    .setContentType("videos/mp4")
+                    .setMetadata(movieMetadata)
+                    .setStreamDuration(getDuration() * 1000)
+                    .build();
+        }
+        return mediaInfo;
+    }
 }

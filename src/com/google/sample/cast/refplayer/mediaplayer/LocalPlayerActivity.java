@@ -16,25 +16,9 @@
 
 package com.google.sample.cast.refplayer.mediaplayer;
 
-import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.NetworkImageView;
-import com.google.android.gms.cast.MediaInfo;
-import com.google.android.gms.cast.MediaLoadRequestData;
-import com.google.android.gms.cast.MediaMetadata;
-import com.google.android.gms.cast.framework.CastButtonFactory;
-import com.google.android.gms.cast.framework.CastContext;
-import com.google.android.gms.cast.framework.CastSession;
-import com.google.android.gms.cast.framework.SessionManagerListener;
-import com.google.android.gms.cast.framework.media.RemoteMediaClient;
-import com.google.android.gms.common.images.WebImage;
-import com.google.sample.cast.refplayer.R;
-import com.google.sample.cast.refplayer.expandedcontrols.ExpandedControlsActivity;
-import com.google.sample.cast.refplayer.settings.CastPreference;
-import com.google.sample.cast.refplayer.utils.CustomVolleyRequest;
-import com.google.sample.cast.refplayer.utils.MediaItem;
-import com.google.sample.cast.refplayer.utils.Utils;
-
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Point;
@@ -46,10 +30,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.core.app.ActivityCompat;
-import androidx.core.view.ViewCompat;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
@@ -66,7 +46,30 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.view.ViewCompat;
+
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
+import com.google.android.gms.cast.MediaLoadRequestData;
+import com.google.android.gms.cast.framework.CastButtonFactory;
+import com.google.android.gms.cast.framework.CastContext;
+import com.google.android.gms.cast.framework.CastSession;
+import com.google.android.gms.cast.framework.SessionManagerListener;
+import com.google.android.gms.cast.framework.media.MediaQueue;
+import com.google.android.gms.cast.framework.media.RemoteMediaClient;
+import com.google.sample.cast.refplayer.R;
+import com.google.sample.cast.refplayer.expandedcontrols.ExpandedControlsActivity;
+import com.google.sample.cast.refplayer.settings.CastPreference;
+import com.google.sample.cast.refplayer.utils.CustomVolleyRequest;
+import com.google.sample.cast.refplayer.utils.MediaItem;
+import com.google.sample.cast.refplayer.utils.Utils;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -103,6 +106,8 @@ public class LocalPlayerActivity extends AppCompatActivity {
     private MenuItem mediaRouteMenuItem;
     private SessionManagerListener<CastSession> mSessionManagerListener;
     private CastSession mCastSession;
+    private MediaQueue mQueue;
+    private RemoteMediaClient mRemoteMediaClient;
 
     /**
      * indicates whether we are doing a local or a remote playback
@@ -128,6 +133,16 @@ public class LocalPlayerActivity extends AppCompatActivity {
         setupCastListener();
         mCastContext = CastContext.getSharedInstance(this);
         mCastSession = mCastContext.getSessionManager().getCurrentCastSession();
+        mRemoteMediaClient = mCastSession.getRemoteMediaClient();
+        mQueue = mRemoteMediaClient.getMediaQueue();
+        mRemoteMediaClient.registerCallback(new RemoteMediaClient.Callback() {
+            @Override
+            public void onStatusUpdated() {
+                Intent intent = new Intent(LocalPlayerActivity.this, ExpandedControlsActivity.class);
+                startActivity(intent);
+                mRemoteMediaClient.unregisterCallback(this);
+            }
+        });
 
         // see what we need to play and where
         Bundle bundle = getIntent().getExtras();
@@ -648,9 +663,41 @@ public class LocalPlayerActivity extends AppCompatActivity {
         mPlayCircle.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                togglePlayback();
+                if (mCastSession != null && mCastSession.isConnected()) {
+                    if (mQueue.getItemCount() == 0) {
+                        mRemoteMediaClient.queueInsertAndPlayItem(mSelectedMedia.toMediaQueueItem(),
+                                0, null);
+                        togglePlayback();
+                    } else {
+                        showEnqueueDialog();
+                    }
+                } else {
+                    togglePlayback();
+                }
             }
         });
+    }
+
+    private void showEnqueueDialog() {
+        final Dialog enqueueDialog = new AlertDialog.Builder(this)
+                .setMessage("Play now or add to queue ?")
+                .setPositiveButton("Add to queue", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        mRemoteMediaClient.queueAppendItem(mSelectedMedia.toMediaQueueItem(), null);
+                        Toast.makeText(LocalPlayerActivity.this,
+                                "\"" + mSelectedMedia.getTitle() + "\" added to queue",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("Play now", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        loadRemoteMedia(0, true);
+                    }
+                })
+                .create();
+        enqueueDialog.show();
     }
 
     private void setupCastListener() {
@@ -739,36 +786,16 @@ public class LocalPlayerActivity extends AppCompatActivity {
             Log.d("LocalPlayerActivity", "loadRemoteMedia remoteMediaClient null");
             return;
         }
-        remoteMediaClient.registerCallback(new RemoteMediaClient.Callback() {
-            @Override
-            public void onStatusUpdated() {
-                Intent intent = new Intent(LocalPlayerActivity.this, ExpandedControlsActivity.class);
-                startActivity(intent);
-                remoteMediaClient.unregisterCallback(this);
-            }
-        });
 
         Log.d("LocalPlayerActivity", "loadRemoteMedia. media loaded");
         remoteMediaClient.load(new MediaLoadRequestData.Builder()
-                .setMediaInfo(buildMediaInfo())
+                .setMediaInfo(mSelectedMedia.getMediaInfo())
                 .setAutoplay(autoPlay)
                 .setCurrentTime(seekPosition)
                 .build());
-    }
 
-    private MediaInfo buildMediaInfo() {
-        MediaMetadata movieMetadata = new MediaMetadata(MediaMetadata.MEDIA_TYPE_MOVIE);
-
-        movieMetadata.putString(MediaMetadata.KEY_SUBTITLE, mSelectedMedia.getSubTitle());
-        movieMetadata.putString(MediaMetadata.KEY_TITLE, mSelectedMedia.getTitle());
-        movieMetadata.addImage(new WebImage(Uri.parse(mSelectedMedia.getImage(0))));
-        movieMetadata.addImage(new WebImage(Uri.parse(mSelectedMedia.getImage(1))));
-
-        return new MediaInfo.Builder(mSelectedMedia.getUrl())
-                .setStreamType(MediaInfo.STREAM_TYPE_BUFFERED)
-                .setContentType("videos/mp4")
-                .setMetadata(movieMetadata)
-                .setStreamDuration(mSelectedMedia.getDuration() * 1000)
-                .build();
+        Toast.makeText(LocalPlayerActivity.this,
+                "Now playing \"" + mSelectedMedia.getTitle() + "\"",
+                Toast.LENGTH_SHORT).show();
     }
 }
