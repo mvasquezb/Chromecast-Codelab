@@ -49,6 +49,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -64,7 +65,10 @@ import com.google.android.gms.cast.framework.CastSession;
 import com.google.android.gms.cast.framework.SessionManagerListener;
 import com.google.android.gms.cast.framework.media.MediaQueue;
 import com.google.android.gms.cast.framework.media.RemoteMediaClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 import com.google.sample.cast.refplayer.R;
+import com.google.sample.cast.refplayer.cast.CustomKSChannel;
 import com.google.sample.cast.refplayer.expandedcontrols.ExpandedControlsActivity;
 import com.google.sample.cast.refplayer.settings.CastPreference;
 import com.google.sample.cast.refplayer.utils.CustomVolleyRequest;
@@ -79,7 +83,7 @@ import java.util.TimerTask;
  */
 public class LocalPlayerActivity extends AppCompatActivity {
 
-    private static final String TAG = "LocalPlayerActivity";
+    public static final String TAG = LocalPlayerActivity.class.getSimpleName();
     private VideoView mVideoView;
     private TextView mTitleView;
     private TextView mDescriptionView;
@@ -108,6 +112,14 @@ public class LocalPlayerActivity extends AppCompatActivity {
     private CastSession mCastSession;
     private MediaQueue mQueue;
     private RemoteMediaClient mRemoteMediaClient;
+    private CustomKSChannel mKsChannel;
+
+    public RemoteMediaClient getRemoteMediaClient() {
+        if (mCastSession != null) {
+            mRemoteMediaClient = mCastSession.getRemoteMediaClient();
+        }
+        return mRemoteMediaClient;
+    }
 
     /**
      * indicates whether we are doing a local or a remote playback
@@ -133,16 +145,19 @@ public class LocalPlayerActivity extends AppCompatActivity {
         setupCastListener();
         mCastContext = CastContext.getSharedInstance(this);
         mCastSession = mCastContext.getSessionManager().getCurrentCastSession();
-        mRemoteMediaClient = mCastSession.getRemoteMediaClient();
-        mQueue = mRemoteMediaClient.getMediaQueue();
-        mRemoteMediaClient.registerCallback(new RemoteMediaClient.Callback() {
-            @Override
-            public void onStatusUpdated() {
-                Intent intent = new Intent(LocalPlayerActivity.this, ExpandedControlsActivity.class);
-                startActivity(intent);
-                mRemoteMediaClient.unregisterCallback(this);
-            }
-        });
+        mKsChannel = new CustomKSChannel();
+        if (mCastSession != null && mCastSession.isConnected()) {
+            mRemoteMediaClient = mCastSession.getRemoteMediaClient();
+            mQueue = getRemoteMediaClient().getMediaQueue();
+            getRemoteMediaClient().registerCallback(new RemoteMediaClient.Callback() {
+                @Override
+                public void onStatusUpdated() {
+                    Intent intent = new Intent(LocalPlayerActivity.this, ExpandedControlsActivity.class);
+                    startActivity(intent);
+                    getRemoteMediaClient().unregisterCallback(this);
+                }
+            });
+        }
 
         // see what we need to play and where
         Bundle bundle = getIntent().getExtras();
@@ -182,6 +197,7 @@ public class LocalPlayerActivity extends AppCompatActivity {
     }
 
     private void updatePlaybackLocation(PlaybackLocation location) {
+        Log.d(LocalPlayerActivity.TAG, "updatePlaybackLocation. " + location);
         mLocation = location;
         if (location == PlaybackLocation.LOCAL) {
             if (mPlaybackState == PlaybackState.PLAYING
@@ -244,10 +260,10 @@ public class LocalPlayerActivity extends AppCompatActivity {
                 break;
 
             case IDLE:
-                Log.d("LocalPlayerActivity", "togglePlayback. IDLE");
+                Log.d(LocalPlayerActivity.TAG, "togglePlayback. IDLE");
                 switch (mLocation) {
                     case LOCAL:
-                        Log.d("LocalPlayerActivity", "togglePlayback. IDLE - LOCAL");
+                        Log.d(LocalPlayerActivity.TAG, "togglePlayback. IDLE - LOCAL");
                         mVideoView.setVideoURI(Uri.parse(mSelectedMedia.getUrl()));
                         mVideoView.seekTo(0);
                         mVideoView.start();
@@ -256,14 +272,14 @@ public class LocalPlayerActivity extends AppCompatActivity {
                         updatePlaybackLocation(PlaybackLocation.LOCAL);
                         break;
                     case REMOTE:
-                        Log.d("LocalPlayerActivity", "togglePlayback. IDLE - REMOTE");
+                        Log.d(LocalPlayerActivity.TAG, "togglePlayback. IDLE - REMOTE");
                         if (mCastSession != null && mCastSession.isConnected()) {
-                            Log.d("LocalPlayerActivity", "togglePlayback. IDLE - REMOTE. Remote media loaded");
+                            Log.d(LocalPlayerActivity.TAG, "togglePlayback. IDLE - REMOTE. Remote media loaded");
                             loadRemoteMedia(mSeekbar.getProgress(), true);
                         }
                         break;
                     default:
-                        Log.d("LocalPlayerActivity", "togglePlayback. IDLE - DEFAULT");
+                        Log.d(LocalPlayerActivity.TAG, "togglePlayback. IDLE - DEFAULT");
                         break;
                 }
                 break;
@@ -349,7 +365,7 @@ public class LocalPlayerActivity extends AppCompatActivity {
             // video (if user is not watching, pause it!)
             mVideoView.pause();
             mPlaybackState = PlaybackState.PAUSED;
-            updatePlayButton(PlaybackState.PAUSED);
+            updatePlayButton(mPlaybackState);
         }
         mCastContext.getSessionManager().removeSessionManagerListener(mSessionManagerListener,
                 CastSession.class);
@@ -669,8 +685,8 @@ public class LocalPlayerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (mCastSession != null && mCastSession.isConnected()) {
-                    if (mQueue.getItemCount() == 0) {
-                        mRemoteMediaClient.queueInsertAndPlayItem(mSelectedMedia.toMediaQueueItem(),
+                    if (mQueue == null || mQueue.getItemCount() == 0) {
+                        getRemoteMediaClient().queueInsertAndPlayItem(mSelectedMedia.toMediaQueueItem(),
                                 0, null);
                         togglePlayback();
                     } else {
@@ -689,7 +705,7 @@ public class LocalPlayerActivity extends AppCompatActivity {
                 .setPositiveButton("Add to queue", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        mRemoteMediaClient.queueAppendItem(mSelectedMedia.toMediaQueueItem(), null);
+                        getRemoteMediaClient().queueAppendItem(mSelectedMedia.toMediaQueueItem(), null);
                         Toast.makeText(LocalPlayerActivity.this,
                                 "\"" + mSelectedMedia.getTitle() + "\" added to queue",
                                 Toast.LENGTH_SHORT).show();
@@ -753,15 +769,26 @@ public class LocalPlayerActivity extends AppCompatActivity {
             }
 
             private void onApplicationConnected(CastSession castSession) {
-                Log.d("LocalPlayerActivity", "onApplicationConnected");
+                Log.d(LocalPlayerActivity.TAG, "onApplicationConnected");
                 mCastSession = castSession;
+                mCastSession.sendMessage(getBaseContext().getString(R.string.cast_namespace), "connection");
+                try {
+                    mCastSession.setMessageReceivedCallbacks(
+                            mKsChannel.getNamespace(),
+                            mKsChannel
+                    );
+                } catch (Exception e) {
+                    Log.e(LocalPlayerActivity.TAG, "Error creating custom channel");
+                }
+                Log.d(LocalPlayerActivity.TAG, "onApplicationConnected. selectedMedia: " + mSelectedMedia);
                 if (null != mSelectedMedia) {
-
+                    Log.d(LocalPlayerActivity.TAG, "onApplicationConnected. selectedMedia not null: " + mSelectedMedia);
                     if (mPlaybackState == PlaybackState.PLAYING) {
                         mVideoView.pause();
                         loadRemoteMedia(mSeekbar.getProgress(), true);
                         return;
                     } else {
+                        Log.d(LocalPlayerActivity.TAG, "onApplicationConnected. selectedMedia null");
                         mPlaybackState = PlaybackState.IDLE;
                         updatePlaybackLocation(PlaybackLocation.REMOTE);
                     }
@@ -771,6 +798,13 @@ public class LocalPlayerActivity extends AppCompatActivity {
             }
 
             private void onApplicationDisconnected() {
+                if (mCastSession != null) {
+                    try {
+                        mCastSession.removeMessageReceivedCallbacks(mKsChannel.getNamespace());
+                    } catch (Exception e) {
+                        Log.e(LocalPlayerActivity.TAG, "Error creating custom channel");
+                    }
+                }
                 updatePlaybackLocation(PlaybackLocation.LOCAL);
                 mPlaybackState = PlaybackState.IDLE;
                 mLocation = PlaybackLocation.LOCAL;
@@ -781,18 +815,26 @@ public class LocalPlayerActivity extends AppCompatActivity {
     }
 
     private void loadRemoteMedia(int seekPosition, boolean autoPlay) {
-        Log.d("LocalPlayerActivity", "loadRemoteMedia");
+        Log.d(LocalPlayerActivity.TAG, "loadRemoteMedia");
         if (mCastSession == null) {
-            Log.d("LocalPlayerActivity", "loadRemoteMedia. CastSession null");
+            Log.d(LocalPlayerActivity.TAG, "loadRemoteMedia. CastSession null");
             return;
         }
         final RemoteMediaClient remoteMediaClient = mCastSession.getRemoteMediaClient();
         if (remoteMediaClient == null) {
-            Log.d("LocalPlayerActivity", "loadRemoteMedia remoteMediaClient null");
+            Log.d(LocalPlayerActivity.TAG, "loadRemoteMedia remoteMediaClient null");
             return;
         }
 
-        Log.d("LocalPlayerActivity", "loadRemoteMedia. media loaded");
+        Log.d(LocalPlayerActivity.TAG, "loadRemoteMedia. media loaded");
+        mCastSession.sendMessage(mKsChannel.getNamespace(), "connection")
+                .setResultCallback(new ResultCallback<Status>() {
+                    @Override
+                    public void onResult(@NonNull Status status) {
+                        Log.d(LocalPlayerActivity.TAG, "sendMessage onResult: " + status.isSuccess());
+                    }
+                });
+//        remoteMediaClient.queueInsertAndPlayItem(mSelectedMedia.toMediaQueueItem(), 0, null);
         remoteMediaClient.load(new MediaLoadRequestData.Builder()
                 .setMediaInfo(mSelectedMedia.getMediaInfo())
                 .setAutoplay(autoPlay)

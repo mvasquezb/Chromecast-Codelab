@@ -166,7 +166,7 @@ public class MediaItem {
 
             mediaInfo = new MediaInfo.Builder(getUrl())
                     .setStreamType(MediaInfo.STREAM_TYPE_BUFFERED)
-                    .setContentType("videos/mp4")
+                    .setContentType("video/mp4")
                     .setMetadata(movieMetadata)
                     .setStreamDuration(getDuration() * 1000)
                     .build();
